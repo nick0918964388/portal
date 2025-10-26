@@ -7,7 +7,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "db:test": "tsx scripts/test-db.ts",
+    "db:init": "tsx scripts/init-db.ts"
   },
   "repository": {
     "type": "git",
@@ -17,6 +19,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^17.2.3",
     "next": "^16.0.0",
     "pg": "^8.16.3",
     "react": "^19.2.0",

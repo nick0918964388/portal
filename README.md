@@ -22,6 +22,10 @@
 - **数据库**: PostgreSQL
 - **数据库客户端**: node-postgres (pg)
 
+## ⚠️ 重要提示
+
+**数据库连接问题？** 如果你在连接数据库时遇到问题，请查看 [DATABASE_SETUP.md](./DATABASE_SETUP.md) 获取详细的故障排除指南。
+
 ## 快速开始
 
 ### 1. 安装依赖
@@ -42,7 +46,27 @@ DATABASE_PASSWORD=admin
 DATABASE_NAME=postgres
 ```
 
-### 3. 启动开发服务器
+### 3. 测试数据库连接
+
+在启动应用前，测试数据库连接：
+
+```bash
+npm run db:test
+```
+
+如果连接成功，你会看到数据库信息。如果失败，请查看 [DATABASE_SETUP.md](./DATABASE_SETUP.md)。
+
+### 4. 初始化数据库（可选）
+
+初始化数据库并插入示例文章：
+
+```bash
+npm run db:init
+```
+
+这会创建必要的表并插入 4 篇示例博客文章。
+
+### 5. 启动开发服务器
 
 ```bash
 npm run dev
@@ -50,9 +74,7 @@ npm run dev
 
 访问 [http://localhost:3000](http://localhost:3000) 查看应用。
 
-### 4. 数据库初始化
-
-数据库表会在第一次调用 API 时自动创建。或者访问首页或管理页面，系统会自动初始化数据库。
+**注意：** 数据库表也会在第一次调用 API 时自动创建（如果你跳过了步骤 4）。
 
 ## 页面结构
 
@@ -126,10 +148,15 @@ npm start
 
 ## 开发命令
 
+**应用命令：**
 - `npm run dev` - 启动开发服务器
 - `npm run build` - 构建生产版本
 - `npm start` - 启动生产服务器
 - `npm run lint` - 运行 ESLint 检查
+
+**数据库命令：**
+- `npm run db:test` - 测试数据库连接
+- `npm run db:init` - 初始化数据库并插入示例数据
 
 ## 项目结构
 
