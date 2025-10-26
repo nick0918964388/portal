@@ -35,11 +35,11 @@ npm install
 创建 `.env.local` 文件：
 
 ```env
-DATABASE_HOST=postgres.mas4dev.xyz
-DATABASE_PORT=5434
-DATABASE_USER=admin
-DATABASE_PASSWORD=admin
-DATABASE_NAME=postgres
+DATABASE_HOST=
+DATABASE_PORT=
+DATABASE_USER=
+DATABASE_PASSWORD=
+DATABASE_NAME=
 ```
 
 ### 3. 启动开发服务器
