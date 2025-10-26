@@ -24,7 +24,8 @@
 
 ## ⚠️ 重要提示
 
-**数据库连接问题？** 如果你在连接数据库时遇到问题，请查看 [DATABASE_SETUP.md](./DATABASE_SETUP.md) 获取详细的故障排除指南。
+- **数据库连接问题？** 查看 [DATABASE_SETUP.md](./DATABASE_SETUP.md) 获取详细的故障排除指南
+- **首页不显示文章？** 查看 [FIX_NO_POSTS.md](./FIX_NO_POSTS.md) 快速修复文章显示问题
 
 ## 快速开始
 
@@ -157,6 +158,8 @@ npm start
 **数据库命令：**
 - `npm run db:test` - 测试数据库连接
 - `npm run db:init` - 初始化数据库并插入示例数据
+- `npm run db:check` - 检查数据库中的文章状态
+- `npm run db:publish` - 发布所有草稿文章
 
 ## 项目结构
 
